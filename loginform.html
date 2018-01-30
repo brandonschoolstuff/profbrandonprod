@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Home</title>
+<!-- Connecting Desktop & Mobile Style Sheets -->
+    <link rel="stylesheet" media="screen and (min-width: 0px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Using Google API Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+
+<!-- Script For User Name Field Validictation -->
+<script>
+/* Function for first name slot being filled or not*/
+  function checkForm(form) {
+    if(form.firstname.value == "") {
+      alert("Error:First name is empty!");
+      form.firstname.focus();
+      return false;
+    }
+/* Function for last name slot being filled or not*/
+    if (form.lastname.value == "") {
+      alert("Error:Last name is empty!");
+      form.lastname.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+</head>
+
+<body>
+<!-- PROFBrandon Productions Logo's Input & With Defined Divs -->
+  <div class="videocamlogo">
+    <img src="VideoCamLogo.png" alt="PB Video Cam Logo">
+  </div>
+
+  <center>
+    <div class="profbrandonprodlogo">
+      <img src="profbrandonprodlogo.png" alt="PROFBrandon Productions Logo" id="resizemainlogo">
+    </div>
+
+    <div class="line-separator"></div>
+
+<!-- Login Container With Text Boxes For User Returning to The Script -->
+<div class="container">
+<div class="form">
+    <div class="subtitle">Login Here</div>
+
+<form action="home.html" method="post" onsubmit="return checkForm(this);"><br>
+<br>
+  <input type="text" name="firstname" placeholder="First Name"><br><br>
+  <input type="text" name="lastname" placeholder="Last Name"><br><br><br>
+  <input type="submit" class="signinbutton" value="Sign In">
+</form>
+</div>
+</div>
+
+      <br> <br> <br> <br> <br> <br> <br> <br>
+
+<!-- Footer of Website With Social Media Icons & Copyright -->
+      <div class="footer">
+        <div class="socials">
+            <img src="socials.png" alt="Social Media Logos" usemap="#socialslinked">
+          </div>
+        <div class="copyright">
+        <i>© 2018 PROFBrandon Productions -  All Rights Reserved</i>
+      </div>
+      </div>
+<!-- Linking to Each Social Media Icon Website Using Coordinates -->
+      <map name="socialslinked">
+        <area shape="square" coords="0,0,26,25" alt="Sun" href="https://www.youtube.com/"  target="_blank">
+        <area shape="square" coords="40,0,65,25" alt="Sun" href="https://www.twitter.com/"  target="_blank">
+        <area shape="square" coords="77,0,101,25" alt="Sun" href="https://www.instagram.com/"  target="_blank">
+        <area shape="square" coords="117,0,150,25" alt="Sun" href="https://www.facebook.com/"  target="_blank">
+      </map
+
+  </center>
+</body>
+</html>

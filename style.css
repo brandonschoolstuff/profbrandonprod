@@ -1,0 +1,377 @@
+body {
+  background: linear-gradient(black, #0c0000);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.videocamlogo {
+  margin: 0 auto;
+  float: left;
+  padding: 40px;
+  position: absolute;
+}
+
+.videocamlogo2 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  margin-top: -3%;
+}
+
+.profbrandonprodlogo {
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 40px;
+}
+
+.line-separator{
+  border-bottom: 2px solid red;
+  width: 50%;
+  margin-top: 1%;
+}
+
+.line-separator2{
+  border-bottom: 1px solid white;
+  width: 60%;
+  margin-top: 3%;
+}
+
+.line-separator3{
+  border-bottom: 1px solid red;
+  width: 8%;
+  margin-top: 3.5%;
+}
+
+h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 1%;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5.5%;
+    padding-bottom: 22px;
+}
+
+.loginbutton {
+    color: white;
+    background-color: red;
+    width: 180px;
+    height: 60px;
+    text-transform: uppercase;
+    margin-top: 10%;
+    border: none;
+    font-size: 20px;
+    font-family:'Maven Pro', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    transition: .3s;
+}
+
+.loginbutton:hover {background-color: #5b0303}
+
+.logoutbutton {
+  color: red;
+  background-color: black;
+  text-transform: uppercase;
+  margin-top: -10%;
+  margin-right: 4%;
+  border: none;
+  font-size: 20px;
+  font-family:'Maven Pro', sans-serif;
+  float: right;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.logoutbutton:hover {color: white}
+
+.logoutoptions {
+  color: white;
+  background-color: red;
+  width: 150px;
+  height: 50px;
+  text-transform: uppercase;
+  margin: 10px;
+  margin-top: 5%;
+  border: none;
+  font-size: 20px;
+  font-family:'Maven Pro', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  transition: .3s;
+}
+
+.logoutoptions:hover {background-color: #5b0303}
+
+.logouttext {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-top: 12%;
+}
+
+.container {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-weight: bold;
+  width:300px;
+  height:350px;
+  background:black;
+  margin: 4% auto;
+  border: 2px solid white;
+  position: relative; top: 50px;
+  text-align: center;
+}
+
+.container .form {
+    position: relative;
+}
+
+.subtitle {
+  position: relative; margin-top: 55px;
+  font-size: 40px;
+  color: white;
+  position: relative;
+}
+
+.signinbutton {
+    background-color: red;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.topnav {
+    margin-top: 0%;
+    background-color: none;
+    font-family: Montserrat;
+    color: white;
+}
+
+.topnav a {
+    float: center;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.topnav a:hover {background-color: #5b0303;transition: .3s;}
+
+.topnav a.active {background-color: #5b0303;}
+
+.maintext {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 2.5%;
+}
+
+.submaintext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+}
+
+#redhighlight, h2 {
+  color: red;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    list-style-position: inside;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    text-align: left;
+    width: 200px;
+}
+
+li:before {
+    content: "•";
+    font-size:30px;
+    padding-right: 20px;
+    color: red;
+}
+
+#map_maker {
+  height: 500px;
+  width: 800px;
+  left: 0;
+  position: 0;
+  top: 0;
+  background-color: grey;
+}
+
+#floating-panel {
+  margin-top: 1.5%;
+  background-color: none;
+  font-family: 'Mave Pro', 'sans-serif';
+  line-height: 30px;
+  margin-right: 2.5%;
+}
+
+#icon_to_use {
+  color: white;
+  background-color: red;
+  width: 120px;
+  height: 30px;
+  text-transform: uppercase;
+  margin-top: 4%;
+  border: none;
+  font-size: 20px;
+  font-family:'Maven Pro', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*#start {
+  color: red;
+  background-color: white;
+  width: 60px;
+  height: 30px;
+  text-transform: uppercase;
+  margin-top: 0%;
+  border: none;
+  font-size: 20px;
+  font-family:'Maven Pro', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+#end {
+  color: red;
+  background-color: white;
+  width: 60px;
+  height: 30px;
+  text-transform: uppercase;
+  margin-top: 1%;
+  border: none;
+  font-size: 20px;
+  font-family:'Maven Pro', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}*/
+
+.titles {
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 3%;
+    margin-left: -36%;
+    font-weight: bold;
+}
+
+.subtitles {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 28px;
+  color: red;
+  margin-left: -28%;
+  margin-top: 2.2%;
+}
+
+.clientvideos {
+  margin-top: 3%;
+}
+
+.devices {
+    font-size: 24px;
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-top: 3px;
+    margin-top: 2%;
+}
+
+#contactinfo {
+    font-size: 26px;
+    font-family: 'Electrolize', sans-serif;
+    color: white;
+    text-transform: lowercase;
+}
+
+.or {
+    font-size: 40px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 3px;
+    margin-top: 3%;
+}
+
+.visit {
+    font-size: 20px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2.5%;
+}
+
+.closing {
+    font-size: 26px;
+    color: red;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5%;
+}
+
+.socials {
+  float: right;
+  padding: 10px;
+  margin-right: 2%;
+}
+
+.copyright {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 11.5%;
+  padding: 14px;
+}
+
+.footer {
+  position: fixed;
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .5 rem;
+}

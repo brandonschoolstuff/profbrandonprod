@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Home</title>
+<!-- Connecting Desktop & Mobile Style Sheets -->
+    <link rel="stylesheet" media="screen and (min-width: 0px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Using Google API Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+</head>
+
+<body>
+<!-- PROFBrandon Productions Logo's Input & With Defined Divs -->
+  <div class="videocamlogo">
+    <img src="VideoCamLogo.png" alt="PB Video Cam Logo">
+  </div>
+
+<center>
+  <div class="profbrandonprodlogo">
+    <img src="profbrandonprodlogo.png" alt="PROFBrandon Productions: Logo" id="resizemainlogo">
+  </div>
+
+<!-- Main Navigation Bar & Logout Button -->
+<div class="topnav">
+  <a href="home.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a class="active" href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+  <a href="logout.html"><input class="logoutbutton" type="submit" value="Logout"></a>
+
+
+  <div class="line-separator2"></div>
+
+    <div class="titles">
+      About Us
+    </div>
+
+<div class="maintext"><i><class id="redhighlight">PROFBrandon Productions</class></i> is a service that provides <br>
+  premium cinematography content for clients that need a <br>
+   professional level wedding video, concert event, gala dance,<br> company product/ service video and many more!
+</div>
+
+<div class="line-separator3"></div>
+
+<div class="submaintext">Below is a map that has our location pinpointed.<br> Feel free to select any
+  additional markers to add onto the map after <br> selecting the hand in the map drawing options.
+  Directions from you to our <br> main office should appear automatically if GPS is enabled.
+  The traffic in <br> the local area is also displayed for any changes of routes you may need to make.
+</div>
+
+<!-- Marker Options to Place on Map-->
+   <form>
+ 	  <select id="icon_to_use">
+   	  <option value="pin.png">Marker</option>
+  	  <option value="car.png">Car</option>
+ 	    <option value="building.png">Building</option>
+      <option value="pylon.png">Pylon</option>
+ 	  </select>
+ 	</form>
+
+<!-- Creating The Map -->
+  <br><div id="map_maker"></div>
+
+<!-- Script for Functions of Map Including User Interaction Such as Marker Placing and GPS -->
+   <script>
+       var map_maker;
+
+/* Specifing Function to Create Map at Set Coordinated and Zoom Range */
+         function initMap() {
+               map_maker = new google.maps.Map(document.getElementById('map_maker'), {
+               zoom: 13,
+               center: {lat: 43.670273, lng: -79.810564}
+               });
+
+/* A Set Marker - Location of PROFBrandon Productions HQ */
+               var marker = new google.maps.Marker({
+                   position: {lat: 43.686412, lng: -79.760087},
+                   map: map_maker
+                 });
+
+/* Google API Layers Such as Showing Live Traffic, Transit Path, & Bike Paths */
+               var trafficLayer = new google.maps.TrafficLayer();
+               trafficLayer.setMap(map_maker);
+
+               var transitLayer = new google.maps.TransitLayer();
+               transitLayer.setMap(map_maker);
+
+               var bikeLayer = new google.maps.BicyclingLayer();
+               bikeLayer.setMap(map_maker);
+
+/* Options For Drawing Shapes on Map Such as Polylines & Rectangles */
+               var drawingManager = new google.maps.drawing.DrawingManager({
+                 drawingMode: google.maps.drawing.OverlayType.MARKER,
+                 drawingControl: true,
+                 drawingControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER,
+                   drawingModes: ['polyline','polygon', 'rectangle']
+                 }
+               });
+
+/* After Selecting Hand from Drawing Manager, This Places A Marker The user Picked On The Clicked Location */
+              function place_marker(location){
+                var emoji = document.getElementById('icon_to_use').value;
+                var marker = new google.maps.Marker({
+                position: location,
+                map: map_maker, icon: emoji
+              });
+              }
+
+/* Listening From Interaction of User's Click on The Map */
+              map_maker.addListener('click', function(e) {
+                var location = e.latLng;
+                place_marker(location);
+             });
+
+               drawingManager.setMap(map_maker);
+
+/* Finding User's GPS Location */
+         	   if(navigator.geolocation) {
+             	     navigator.geolocation.watchPosition(set_my_position);
+         	   }
+         	   else {
+             	     alert("Geolocation doesn't work in your browser");
+         	   }
+               }
+
+/* Placing Marker of User's GPS Location */
+         	function set_my_position (position){
+         	  var emoji = "user.png"
+         	  var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         	  var marker = new google.maps.Marker({
+         	    position: pos,
+         	    map: map_maker,
+         	    icon: emoji
+         	});
+        }
+   </script>
+
+<br>
+<!-- Using Google API Key and Linking it Back to Map -->
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc4JPRXVmNMaaGRDouq4g1ldyarzykn60&libraries=drawing&callback=initMap"
+            async defer></script>
+
+<!-- Hyperink to External Page - Google Maps -->
+            <div class="submaintext">
+               Or you can follow this link to reach <a href="https://www.google.ca/maps" style="color:red" target="_blank">Google Maps</a> itself.
+            </div>
+
+<br><br><br><br><br><br><br>
+
+<!-- Footer of Website With Social Media Icons & Copyright -->
+<div class="footer">
+  <div class="socials">
+      <img src="socials.png" alt="Social Media Logos" usemap="#socialslinked">
+    </div>
+  <div class="copyright">
+  <i>© 2018 PROFBrandon Productions -  All Rights Reserved</i>
+</div>
+</div>
+<!-- Linking to Each Social Media Icon Website Using Coordinates -->
+<map name="socialslinked">
+  <area shape="square" coords="0,0,26,25" alt="Sun" href="https://www.youtube.com/"  target="_blank">
+  <area shape="square" coords="40,0,65,25" alt="Sun" href="https://www.twitter.com/"  target="_blank">
+  <area shape="square" coords="77,0,101,25" alt="Sun" href="https://www.instagram.com/"  target="_blank">
+  <area shape="square" coords="117,0,150,25" alt="Sun" href="https://www.facebook.com/"  target="_blank">
+</map
+
+</center>
+</body>
+</html>
